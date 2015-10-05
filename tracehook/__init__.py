@@ -220,8 +220,10 @@ def around(func, args, kwargs, func_name, compact):
 
     state['tracing'] = func_name
     sys.settrace(trace_snapshot_at_return)
-    ret_vals = func(*args, **kwargs)
-    sys.settrace(None)
+    try:
+      ret_vals = func(*args, **kwargs)
+    finally:
+      sys.settrace(None)
     state['tracing'] = None
 
     if not compact and (state['last_was'] == 'post'):
