@@ -25,6 +25,8 @@ except(ImportError): # python < 2.6 needs this
 from colorama import Fore, Back, Style
 from io import open
 
+__version__ = '0.3.2'
+
 global conf, state
 
 # Editable defaults
