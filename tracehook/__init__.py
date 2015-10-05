@@ -20,7 +20,7 @@
 import sys, inspect, pprint, time
 try:
   from collections import OrderedDict
-except(ImportError):
+except(ImportError): # python < 2.6 needs this
   OrderedDict = dict
 from colorama import Fore, Back, Style
 from io import open
