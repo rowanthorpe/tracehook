@@ -38,8 +38,8 @@ From latest release tarball (with dependencies)
 
 ::
 
-    $ wget https://github.com/rowanthorpe/tracehook/tarball/0.3.1
-    $ wget https://github.com/tartley/colorama/tarball/0.3.3
+    $ wget -O tracehook-0.3.1.tar.gz https://github.com/rowanthorpe/tracehook/tarball/v0.3.1
+    $ wget -O colorama-0.3.3.tar.gz https://github.com/tartley/colorama/tarball/v0.3.3
 
 Usage
 ~~~~~
