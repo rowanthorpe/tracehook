@@ -21,6 +21,17 @@ entirely just requires that the decorators be of the form
 ``@wrap(around=no_around``), which means only the pre- and post- blocks will be
 run.
 
+Presently @wrap accepts the following arguments (unquoted - "compact" is
+boolean and the others are function references):
+
+ pre     = pre    | no_pre
+ around  = around | no_around
+ post    = post   | no_post
+ compact = True   | False
+
+The {,no_}pre/around/post are references to ready-provided functions, but if
+you want to experiment there is nothing stopping you creating your own custom
+functions based on those and doing e.g. @wrap(pre=my_pre)
 
 Installation
 ------------
