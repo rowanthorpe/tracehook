@@ -24,10 +24,12 @@ run.
 Presently @wrap accepts the following arguments (unquoted - "compact" is
 boolean and the others are function references):
 
- pre     = pre    | no_pre
- around  = around | no_around
- post    = post   | no_post
- compact = True   | False
+::
+
+    pre     = pre    | no_pre
+    around  = around | no_around
+    post    = post   | no_post
+    compact = True   | False
 
 The {,no_}pre/around/post are references to ready-provided functions, but if
 you want to experiment there is nothing stopping you creating your own custom
