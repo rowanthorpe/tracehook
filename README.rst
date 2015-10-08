@@ -108,7 +108,7 @@ TODO
 Screenshots
 -----------
 
-.. figure:: doc/tracehook_test_snapshot.png
+.. figure:: doc/tracehook_test_screenshot.png
    :width: 50%
    :alt: tracehook test-run screenshot
 
