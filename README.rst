@@ -31,7 +31,7 @@ boolean and the others are function references):
     post    = post   | no_post
     compact = True   | False
 
-The {,no_}pre/around/post are references to ready-provided functions, but if
+The {,no_}pre/around/post references are to ready-provided functions, but if
 you want to experiment there is nothing stopping you creating your own custom
 functions based on those and doing e.g. ``@wrap(pre=my_pre)``
 
