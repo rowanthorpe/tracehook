@@ -104,3 +104,12 @@ TODO
 
 * (nitpick) Use something like argparse to colourise each commandline argv
   exactly, rather than the present heuristic way
+
+Screenshots
+-----------
+
+.. figure:: doc/tracehook_test_snapshot.png
+   :width: 50%
+   :alt: tracehook test-run screenshot
+
+   tracehook test-run screenshot 2015/10/08
