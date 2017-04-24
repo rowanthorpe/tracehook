@@ -78,11 +78,15 @@ and quickest explanation is to just look in that file for inspiration.
       from . import tracehook as th
     else:
       import os, sys, inspect
-      trc_folder = os.path.realpath(os.path.join(os.path.dirname(
-        inspect.getfile(inspect.currentframe())), "tracehook"))
+      trc_exec = inspect.getfile(inspect.currentframe())
+      try:
+        trc_exec = os.readlink(trc_exec)
+      except OSError:
+        pass
+      trc_folder = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(trc_exec)), "tracehook"))
       if trc_folder not in sys.path:
         sys.path.insert(0, trc_folder)
-      del trc_folder
+      del trc_exec, trc_folder
       import tracehook as th
 
 * And if the importing subsystem is inexplicably broken for you, use an

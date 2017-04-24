@@ -6,11 +6,15 @@ if __package__:
   from .. import tracehook as th
 else:
   import os, sys, inspect, time
-  trc_folder = os.path.realpath(os.path.dirname(os.path.dirname(
-                                inspect.getfile(inspect.currentframe()))))
+  trc_exec = inspect.getfile(inspect.currentframe())
+  try:
+    trc_exec = os.readlink(trc_exec)
+  except OSError:
+    pass
+  trc_folder = os.path.realpath(os.path.dirname(os.path.dirname(os.path.realpath(trc_exec))))
   if trc_folder not in sys.path:
     sys.path.insert(0, trc_folder)
-  del trc_folder
+  del trc_exec, trc_folder
   import tracehook as th
 
 ## Just some ad-hoc testing/example usage for now...
